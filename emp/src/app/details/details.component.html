@@ -1,0 +1,76 @@
+<nav class="navbar navabar-light bg-primary">
+    <div class="container-fluid">
+        <h1>Angular cRUD</h1>
+        <div class="d-flex">
+            <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Add Employee</button>
+        </div>
+    </div>
+</nav>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>phno</th>
+            <th>sal</th>
+            <th>action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of Datas">
+            <td>{{row.id}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.email}}</td>
+            <td>{{row.phno}}</td>
+            <td>{{row.sal}}</td>
+            <td>
+
+                <button class="btn btn-primary" (click)="onEdit(row)" data-toggle="modal" data-target="#exampleModal">Edit</button>
+                <button class="btn btn-danger mx-3" (click)="deleteEmpDetails(row)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formvalue">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" formControlName="name" class="form-control" aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="form-group">
+                        <label>email</label>
+                        <input type="email" class="form-control" formControlName="email">
+                    </div>
+                    <div class="form-group">
+                        <label>phone no</label>
+                        <input type="text" class="form-control" formControlName="phno">
+                    </div>
+                    <div class="form-group">
+                        <label>sal</label>
+                        <input type="text" class="form-control" formControlName="sal">
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="cancel" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="postEmpDetails()">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
