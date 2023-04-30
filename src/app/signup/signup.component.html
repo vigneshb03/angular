@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-body">
+      <form [formGroup]="registerForm" (ngSubmit)="reigisterFormSubmit()">
+        <div class="row">
+          <div class="col">
+            <label for="name">Name</label>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Enter Name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="email">email</label>
+          </div>
+          <div class="col">
+            <input type="email" class="form-control" placeholder="Enter Name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="phone">phone</label>
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" placeholder="Enter Name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="dob">dob</label>
+          </div>
+          <div class="col">
+            <input type="date" class="form-control" placeholder="Enter Date">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="password" >password</label>
+          </div>
+          <div class="col">
+            <input type="password" class="form-control" placeholder="Enter password">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="confirmpassword">confirmpassword</label>
+          </div>
+          <div class="col">
+            <input type="password" class="form-control" placeholder="Enter password">
+          </div>
+        </div>
+        <div class="row">
+          <button class="btn btn-info text-danger shadow" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

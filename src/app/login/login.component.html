@@ -1,0 +1,25 @@
+
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-body" *ngIf="showLoginForm">
+      <form  [formGroup]="loginForm" (ngSubmit)="submitForm()">
+        <div class="form-group">
+          <label for="">Username : </label>
+          <input type="text" class="form-control" [(ngModel)]="email" formControlName="email">
+        </div>
+        <div class="form-group">
+          <span class="err_msg">{{errorMsg}}</span>
+        </div>
+        <div class="form-group">
+          <label for="">password : </label>
+          <input type="password" class="form-control" [(ngModel)]="password" formControlName="password">
+        </div>
+
+        <div class="form-group">
+
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
