@@ -11,7 +11,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {ErrorStateMatcher, ShowOnDirtyErrorStateMatcher} from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input'
 import {HttpClientModule} from '@angular/common/http';
-import { MatToolbarModule} from '@angular/material/toolbar'
+import { MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,

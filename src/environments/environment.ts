@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  swaggs:'http://localhost:3000',
+  swaggs:'http://192.168.0.107:9991',
+  environment:'http://192.168.0.107:1999'
 };
 
 /*

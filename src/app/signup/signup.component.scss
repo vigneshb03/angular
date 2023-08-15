@@ -8,3 +8,10 @@ input{
 .row{
   margin-top: 10px;
 }
+.container-fluid{
+  position: relative;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
